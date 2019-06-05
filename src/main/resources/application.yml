@@ -1,7 +1,3 @@
-server:
-  servlet:
-    context-path: /buy
-
 management:
   endpoints:
     web:
