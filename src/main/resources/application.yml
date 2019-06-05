@@ -1,0 +1,9 @@
+server:
+  servlet:
+    context-path: /buy
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: metrics, prometheus
