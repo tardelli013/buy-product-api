@@ -12,6 +12,7 @@
     <artifactId>buy-product</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>buy-product</name>
+    <packaging>jar</packaging>
     <description>Demo project for Spring Boot</description>
 
     <properties>

@@ -8,4 +8,8 @@ public class SelicRate {
     private String data;
     private String valor;
 
+    public Double getValor() {
+        return new Double(valor);
+    }
+
 }

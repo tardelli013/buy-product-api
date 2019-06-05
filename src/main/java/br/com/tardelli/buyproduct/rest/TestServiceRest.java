@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -18,7 +17,6 @@ public class TestServiceRest {
     @GetMapping("/people")
     public List<SelicRate> listPeople() {
 
-        List<SelicRate> selicRates = centralBankBrazilClient.findSelicRates("json", "01/01/2010", "30/01/2010");
         List<SelicRate> selicRatesByLastDays = centralBankBrazilClient.findSelicRatesByLastDays(3, "json");
 
         return selicRatesByLastDays;
