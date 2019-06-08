@@ -3,3 +3,10 @@ management:
     web:
       exposure:
         include: metrics, prometheus
+
+consumers:
+  centralBankBrazil:
+    name: CentralBankBrazil
+    url: https://api.bcb.gov.br/
+    selicRatesByLastDays: dados/serie/bcdata.sgs.11/dados/ultimos/{lastDays}
+

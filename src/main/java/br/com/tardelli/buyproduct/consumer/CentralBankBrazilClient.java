@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@FeignClient(name = "CentralBankBrazil", url = "https://api.bcb.gov.br/")
+@FeignClient(name = "${consumers.centralBankBrazil.name}", url = "${consumers.centralBankBrazil.url}")
 public interface CentralBankBrazilClient {
 
-    @RequestMapping(method = RequestMethod.GET, value = "dados/serie/bcdata.sgs.11/dados/ultimos/{lastDays}")
+    @RequestMapping(method = RequestMethod.GET, value = "${consumers.centralBankBrazil.selicRatesByLastDays}")
     List<SelicRate> findSelicRatesByLastDays(@PathVariable("lastDays") Integer lastDays, @RequestParam(name = "formato") String format);
 
 }
