@@ -8,7 +8,7 @@ Este microserviço expõe um endpoint para que possamos simular a compra de um p
 **Spring-Boot**  
 **Spring-Cloud-Feign**  
 **Micrometer-Prometheus**  
-**Lombok** 
+**Lombok**
 **Swagger**  
 **Maven**  
 **Junit**  
