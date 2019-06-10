@@ -4,14 +4,22 @@ Este microserviço expõe um endpoint para que possamos simular a compra de um p
   
 ## Stack:  
   
-**Java 8**  
-**Spring-Boot**  
+**Java 8**    
+
+**Spring-Boot**   
+
 **Spring-Cloud-Feign**
+
 **Lombok**
+
 **Micrometer-Prometheus**  
+
 **Swagger**  
+
 **Maven**  
+
 **Junit**  
+
   
 Projeto pode ser executado com Maven com o comando abaixo:  
 ```  
