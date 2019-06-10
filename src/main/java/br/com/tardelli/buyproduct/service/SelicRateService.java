@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 public class SelicRateService {
 
     private static final String DEFAULT_FORMAT = "json";
+
     private CentralBankBrazilClient centralBankBrazilClient;
 
     @Autowired

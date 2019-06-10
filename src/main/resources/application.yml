@@ -9,4 +9,3 @@ consumers:
     name: CentralBankBrazil
     url: https://api.bcb.gov.br/
     selicRatesByLastDays: dados/serie/bcdata.sgs.11/dados/ultimos/{lastDays}
-

@@ -34,7 +34,7 @@ public class SelicRateServiceTest {
         Assert.assertEquals(accumulated, new Double("6.0"));
     }
 
-    private List<SelicRate> getRatesMock(int days) {
+    public static List<SelicRate> getRatesMock(int days) {
         List<SelicRate> rates = new ArrayList<>();
 
         for (int i = 0; i < days; i++) {

@@ -6,27 +6,30 @@ import br.com.tardelli.buyproduct.factory.InstallmentFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class BuyService {
 
+    private static final Integer SELIC_RATE_ACCUMULATED_DAYS = 30;
+
+    private SelicRateService selicRateService;
+
     @Autowired
-    private InstallmentFactory factory;
+    public BuyService(SelicRateService selicRateService) {
+        this.selicRateService = selicRateService;
+    }
 
     public List<InstallmentDTO> buy(BuyRequestDTO buyRequest) {
+        Double selicRateAccumulated = getSelicRateAccumulated(buyRequest.getCondicaoPagamento().getQtdeParcelas());
 
-        factory.build();
-        //TODO fake object temp
+        return InstallmentFactory.build(selicRateAccumulated, buyRequest);
+    }
 
-        List<InstallmentDTO> list = new ArrayList<>();
-        InstallmentDTO dto = new InstallmentDTO();
-        dto.setNumeroParcela(1);
-        dto.setTaxaJurosAoMes(2.23);
-        dto.setValor(123.33);
-        list.add(dto);
-
-        return list;
+    public Double getSelicRateAccumulated(Integer numberOfParcels) {
+        if (numberOfParcels > 6) {
+            return selicRateService.getSelicRateAccumulatedByDays(SELIC_RATE_ACCUMULATED_DAYS);
+        }
+        return 0.0;
     }
 }
