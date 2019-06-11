@@ -50,3 +50,4 @@ mvn clean test
  1. Integrar o microserviço com **Service Discovery** *Eureka* da stack Spring Cloud Netflix
  2. Integrar o microserviço com **Gateway/proxy** dinâmico *Zull* da stack Spring Cloud Netflix
  3. Adicionar um **Circuit Breaker** para manter a resiliência e proteção a falhas do microserviço com *Hystrix* da stack Spring Cloud Netflix
+ 4. Fazer um **Cache** das requisições ao serviço do Banco Central do Brasil para evitar varias chamadas iguais, salvar este **cache** em uma base *MongoDB* ou no *Redis*
